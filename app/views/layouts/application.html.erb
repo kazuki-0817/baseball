@@ -4,7 +4,8 @@
     <title>Ba1</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -17,6 +18,39 @@
       <p class="alert"><%= alert %></p>
     <% end %>
     <p class="sidebar-menu_txt"><%= link_to "ログアウト",destroy_user_session_path,method: :delete %></p>
-    <%= yield %>
+    <div class="container">
+      <header>
+        <% if user_signed_in? %>
+        <div class="menu-bar">
+          <i class="fas fa-bars header__icon"></i>
+          <aside class="sidebar-menu">
+            <div class="sidebar-menu_inner">
+              <h2 class="sidebar-menu_ttl">Menu</h2>
+              <i class="fas fa-times-circle sidebar-menu_icon"></i>
+            </div>
+            <p class="sidebar-menu_txt"><%= link_to "ホーム",root_path %></p>
+            <p class="sidebar-menu_txt"><%= link_to "profile",user_path(current_user) %></p>
+            <p class="sidebar-menu_txt"><%= link_to "ログアウト",destroy_user_session_path,method: :delete %></p>
+            
+          </aside>
+          <div class="sidebar-menu-bg"></div>
+        </div>
+        <% end %>
+        <div class="header-login">
+          <% if user_signed_in? %>
+          
+        <% else %>
+          <div class="not-login-status">
+            <%= link_to "新規登録",new_user_registration_path %>
+            <%= link_to "ログイン" ,new_user_session_path%>
+          </div>
+        <% end %>
+        </div>
+        
+      </header>
+      <main>
+        <%= yield %>
+      </main>
+    </div>
   </body>
 </html>

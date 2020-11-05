@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    # before_action :login_required
+    before_action :login_required
   def index
     if params[:team_id]
       @team=Team.find(params[:team_id])

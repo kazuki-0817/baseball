@@ -1,0 +1,9 @@
+<% @articles.each do |article| %>
+    <div class="article">
+        <%= link_to article do %>
+            <h2 class="article-title"><%= article.title %></h2>
+            <iframe  src="https://www.youtube.com/embed/<%=article.videoid[32..42]%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p class="article-body"><%= truncate(article.body, length: 30) %></p>
+        <% end %>
+    </div>
+<% end %>

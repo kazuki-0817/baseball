@@ -12,7 +12,6 @@
         <th width="80"><%= f.label :title %></th>
         <td><%= f.text_field :title, size: 50 %></td>
     </tr>
-    <!-- ここ -->
     <tr class="field">
         <th width="80"><%= f.label :team_id %></th>
         <td><%= f.collection_select(:team_id,Team.all,:id,:name) %></td>

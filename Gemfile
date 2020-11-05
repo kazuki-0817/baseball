@@ -61,6 +61,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
 
-gem :production do
+group :production do
   gem 'pg'
 end

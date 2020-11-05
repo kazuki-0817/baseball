@@ -1,0 +1,38 @@
+<!-- ユーザー詳細画面 -->
+<div class="user-container">
+    <div class="user-profile">
+        <div class="field">
+            <p style="font-size:5vmin;"><%= @user.username %>さんのプロフィール画面</p>
+        </div>
+        <div class="field">
+           <!-- profile画像表示 -->
+            <p><%= attachment_image_tag @user,:profile_image,fallback: "baseball_st5.jpg",size:"200x200" %></p>
+        </div>
+        <div class="field">
+            <!-- ユーザー名表示 -->
+            <p><span style="padding-right:3vmin;">名前</span><%= @user.username %></p>
+        </div>
+        <div class="field">
+            <% if @user.id==current_user.id %>
+            <!-- ユーザーeメールアドレス表示 -->
+                <p><span style="padding-right:3vmin;">メールアドレス</span><%= @user.email %></p>
+            <% end %>
+        </div>
+        <div class="field">
+            <!-- ユーザーprofile文 -->
+            <p style="margin-bottom:3vmin;">プロフィール</p>
+            <p><%= @user.profile %></p>
+        </div>
+        <div class="field">
+            <% if @user.id==current_user.id %>
+            <!-- 閲覧しているユーザーがログインしているユーザーと同じなら編集リンクを表示 -->
+                <p><%= link_to "編集",edit_user_path(@user) %></p>
+            <% end %>
+        </div>
+        <div class="field">
+            <!-- 詳細画面に表示されているユーザーの書いた記事一覧へ -->
+            <!-- ここ -->
+        </div>
+    </div>
+</div>
+

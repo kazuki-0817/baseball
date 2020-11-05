@@ -1,0 +1,20 @@
+<div class="users">
+    <h2 style="font-size:4vmin;">ユーザー一覧</h2>
+    <div class="flex" >
+            <!-- ユーザー一覧 -->
+            <% @users.each do |user| %>
+                <div class="one-user">
+                    <p>
+                        <%= link_to user_path(user) do%> <%# ユーザー詳細ページへ %>
+                            <%= attachment_image_tag user,:profile_image,fallback: "baseball_st5.jpg" %>
+                        <% end %>
+                    </p>
+                    <p>
+                        <%= link_to user_path(user) do%> <%# ユーザー詳細ページへ %>
+                            <%= user.username %>
+                        <% end %>
+                    </p>
+                </div>
+            <% end %>
+    </div>
+</div>

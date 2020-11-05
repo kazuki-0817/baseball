@@ -1,0 +1,24 @@
+<% if @article.errors.any? %>
+  <div class="user-container">
+    <ul>
+      <% @article.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+<table class="attr">
+    <tr class="field">
+        <th width="80"><%= f.label :title %></th>
+        <td><%= f.text_field :title, size: 50 %></td>
+    </tr>
+    <!-- ここ -->
+    <tr class="field">
+        <th width="80"><%= f.label :videoid %></th>
+        <td><%= f.text_field :videoid, size: 50 %></td>
+    </tr>
+    <tr class="field">
+        <th><%= f.label :body %></th>
+        <td><%= f.text_area :body, rows: 10, cols: 45 %></td>
+    </tr>
+</table>

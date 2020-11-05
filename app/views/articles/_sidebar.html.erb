@@ -1,0 +1,30 @@
+<div class="sidebar flex">
+    <div class="sidebar_box flex">
+        <% if current_user %>
+          <div class="sidebar_individual-menu">
+          <ul>
+            <li><%= link_to "新規記事の作成" ,new_article_path(current_user)%></li>
+            <li><%= link_to "自分のprofileへ",user_path(current_user) %></li>
+            <li>見たい球団の記事
+            <select name="select" onChange="location.href=value;">
+              <option value="#">ページを選択してください</option>
+              <option value="/articles">全ての記事</option>
+              <option value="/teams/1/articles">中日</option>
+              <option value="/teams/2/articles">阪神</option>
+              <option value="/teams/3/articles">巨人</option>
+              <option value="/teams/4/articles">広島</option>
+              <option value="/teams/5/articles">ヤクルト</option>
+              <option value="/teams/6/articles">横浜</option>
+              <option value="/teams/7/articles">ソフトバンク</option>
+              <option value="/teams/8/articles">楽天</option>
+              <option value="/teams/9/articles">オリックス</option>
+              <option value="/teams/10/articles">ロッテ</option>
+              <option value="/teams/11/articles">日本ハム</option>
+              <option value="/teams/12/articles">西武</option>
+            </select></li>
+          </ul>          
+          </div>
+        <% end %>
+        
+    </div>
+</div>

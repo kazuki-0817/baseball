@@ -1,3 +1,160 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.articles{
+    width:100%;
+    display:flex;
+    margin-top: 3rem;
+    padding:10px;
+    .articles_group{
+        width:90%;
+        select{
+            display:none;
+        }
+    }
+    .article-box,.article-single{
+        display: flex;
+        .article-edit {
+            font-size: 3vmin;
+        }
+        .article-title{
+            font-size:2.4rem;
+        }
+        .article-body{
+            font-size:1.5rem;
+        }
+        .article{
+            width:45%;
+        }
+    }
+    .article-box{
+        justify-content: space-between;
+        flex-wrap :wrap;
+    }
+    .article-single{
+        justify-content: center;
+    }
+    .pagination {
+        font-size: 3vmin;
+        float: right;
+        padding: 10px 5px 0 0;
+    }
+}
+.article-create{
+    display: flex;
+    justify-content: center;
+    .page-title{
+        margin-bottom:2rem;
+        font-size:2rem;
+    }
+    form{
+        #article_body {
+            width: 100%;
+        }
+        .field{
+            input{
+                width:100%;
+                height: 3.5rem;
+                // font-size:100%;
+                padding:0 0 0 5px;
+                margin:0 auto 2rem auto;
+    
+            }
+            textarea{
+                border: 1px solid rgba(0,0,0,0.2);
+                padding: 5px;
+                margin-bottom:2rem;
+            }
+        }
+        .article_submit{
+            margin-top:2rem;
+        }
+        input[type="submit"] {
+            font-size: 1.5rem;
+            padding: 5px;
+        }
+           
+    }
+}
+.sidebar{
+    width:30%;
+    justify-content: center;
+    margin-top:10rem;
+    .sidebar_box{
+        background-color:rgba(222,222,222,0.5);
+        box-shadow: 0 0 8px gray;
+        width:200px;
+        height:300px;
+        padding:5px;
+        justify-content: center;
+        align-items: center;
+        .sidebar_individual-menu li{
+            padding:10px 0;
+            font-size:1.5rem;
+            list-style: inside;
+        }
+    }
+}
+@media (min-width:1800px){
+    .articles{
+        .article-box,.article-single{
+            .article{
+                width:33%;
+            }
+        }
+    }
+}
+@media (max-width:768px){
+    .articles{
+        .article-box{
+            .article{
+                iframe{
+                    height:100px;
+                    width:200px;
+                }
+            }
+        }
+        .articles_group{
+            .article-single{
+                iframe{
+                    height:200px;
+                    width:300px;
+                }
+            }
+        }
+    }
+}
+@media (max-width:486px){
+    .articles{
+        .article-box{
+            .article{
+                width:100%;
+                iframe{
+                    height:150px;
+                    width:250px;
+                }
+            }
+        }
+        .articles_group{
+            width:95%;
+            select{
+                display:block;
+                margin-left: 30px;
+                width: 100px;
+                height: 40px;
+            }
+            .article-single{
+                .article{
+                    width:100%;
+                }
+            }
+        }
+        .sidebar{
+            display:none !important;
+        }
+        h1{
+            font-size:2.5rem !important;
+        }
+    }
+    
+}

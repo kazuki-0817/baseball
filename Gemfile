@@ -60,6 +60,14 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
+gem 'jquery-rails'
+gem "refile", require: "refile/rails",github: "manfe/refile"
+gem "refile-mini_magick"
+gem "rails-i18n"
+gem "devise-i18n"
+gem "devise-i18n-views"
+gem "kaminari"
+gem "kaminari-i18n"
 
 group :production do
   gem 'pg'

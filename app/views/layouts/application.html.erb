@@ -16,6 +16,7 @@
     <% if flash[:alert] %>
       <p class="alert"><%= alert %></p>
     <% end %>
+    <p class="sidebar-menu_txt"><%= link_to "ログアウト",destroy_user_session_path,method: :delete %></p>
     <%= yield %>
   </body>
 </html>

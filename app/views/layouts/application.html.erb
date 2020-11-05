@@ -30,6 +30,24 @@
             </div>
             <p class="sidebar-menu_txt"><%= link_to "ホーム",root_path %></p>
             <p class="sidebar-menu_txt"><%= link_to "profile",user_path(current_user) %></p>
+            <p class="sidebar-menu_txt"><%= link_to "記事の作成",new_article_path(current_user) %></p>
+            <p class="sidebar-menu_txt"><%= link_to "記事一覧",articles_path %></p>
+            <p class="sidebar-menu_txt"><select name="select" onChange="location.href=value;" >
+              <option value="#">球団の記事を選択</option>
+              <option value="/articles">全ての記事</option>
+              <option value="/teams/1/articles">中日</option>
+              <option value="/teams/2/articles">阪神</option>
+              <option value="/teams/3/articles">巨人</option>
+              <option value="/teams/4/articles">広島</option>
+              <option value="/teams/5/articles">ヤクルト</option>
+              <option value="/teams/6/articles">横浜</option>
+              <option value="/teams/7/articles">ソフトバンク</option>
+              <option value="/teams/8/articles">楽天</option>
+              <option value="/teams/9/articles">オリックス</option>
+              <option value="/teams/10/articles">ロッテ</option>
+              <option value="/teams/11/articles">日本ハム</option>
+              <option value="/teams/12/articles">西武</option>
+            </select></p>
             <p class="sidebar-menu_txt"><%= link_to "ログアウト",destroy_user_session_path,method: :delete %></p>
             
           </aside>
@@ -38,7 +56,13 @@
         <% end %>
         <div class="header-login">
           <% if user_signed_in? %>
-          
+          <div class="login-status">
+            <!--<%= link_to current_user.username ,user_path(current_user) %>
+            <%= link_to "ユーザー一覧",users_path %>
+            <%= link_to "ホーム",root_path %>
+            <%= link_to "記事一覧",articles_path %>
+            <%= link_to "ログアウト",destroy_user_session_path,method: :delete %>-->
+          </div>
         <% else %>
           <div class="not-login-status">
             <%= link_to "新規登録",new_user_registration_path %>

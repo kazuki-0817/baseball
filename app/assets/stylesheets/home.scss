@@ -1,3 +1,175 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.home{
+    width:100%;
+    .home-top{
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top:2rem;
+        img{
+            width:400px;
+            height:400px;
+        }
+    }
+    h1 {
+        font-size: 4rem;
+    }
+    .form {
+        width: 400px;
+        height: 400px;
+        text-align: center;
+        h2,p,a{
+            padding:10px 0;
+        }
+        h2{
+            font-size:2.5rem;
+        }
+        p,a{
+            font-size:2rem;
+        }
+    }
+    .slider{
+        /* スライドを表示させる画面の横幅(≒スライド１枚あたりの横幅) */
+        width: 100%;
+        /* スライドを表示させる画面の縦幅(≒スライド１枚あたりの縦幅) */
+        height: 100vh;
+        /* はみ出した要素は隠れるようにする */
+        overflow: hidden;
+
+        margin:0 auto;
+        position: relative;
+        
+    }
+    .slider-absolute{
+        position: absolute;
+        bottom:50px;
+        right:5px;
+        z-index:2;
+        font-size:4vw;
+        color:rgba(230,230,230,1);
+    }
+    .slider__container{
+        /* スライドを表示する画面とスライド１枚をぴったり合わせるため設定 */
+        padding: 0;
+        margin: 0;
+        
+        /* 子要素でfloatを利用しているため設定 */
+        overflow: hidden;
+    
+        list-style: none;
+    
+        /* 後ほどJSでleftプロパティを設定するため必要 */
+        position: relative;
+    
+    }
+    .slider__item{
+        /* スライド１枚あたりの横幅 */
+        width: 100vw;
+        /* スライド１枚あたりの縦幅 */
+        height: 100vh;
+        /* スライドを横一列に並べる */
+        float: left;
+    }
+    .site-description{
+        display: flex;
+        justify-content: center;
+        // background-color: rgba(222, 222, 222, 0.8);
+        // box-shadow: 0 0 8px grey;
+        border-radius: 7px;
+        margin:0 auto;
+        ul, ol {
+            padding: 0;
+            width:75%;
+          }
+        ul li{
+            margin:3em 0;
+        }
+        ul>li> p {
+        position: relative;
+        list-style-type: none!important;/*ポチ消す*/
+        padding: 0.5em;
+        margin-bottom: 5px;
+        line-height: 1.5;
+        background-color:rgba(255,0,0,0.6);
+        vertical-align: middle;
+        color: #505050;
+        border-radius: 15px;
+        font-size:2rem
+        }
+        
+        // ul p:before{ 
+        // display:inline-block; 
+        // vertical-align: middle;
+        // /*以下白丸つくる*/
+        // content:'';
+        // width:1em;
+        // height: 1em;
+        // background: #fff;
+        // border-radius: 50%;
+        // margin-right: 8px;
+        // }
+        .site-description_title{
+            color: #404040;
+            border-left: solid 6px #1fa67a;/*左側の線*/
+            border-bottom: solid 2px #dadada;/*下に灰色線*/
+            background: whitesmoke;
+            line-height: 1.5;
+            padding: 0.5em;
+            list-style-type: none!important;/*ポチ消す*/
+            font-weight: bold;
+            font-size:3rem;
+        }
+        img{
+            width:100%;
+            object-fit: cover;
+            height: 300px;
+        }
+    }
+}
+@media (max-width:768px){
+    .home{
+        h1{
+            font-size:2.8rem;
+        }
+        .home-top{
+            img{
+                width:250px;
+                height:250px;
+            }
+        }
+        .site-description{
+            width:100%;
+        }
+    }
+	
+}
+@media (max-width:486px){
+    .home{
+        h1{
+            font-size:1.8rem;
+        }
+        .home-top{
+            img{
+                width:120px;
+                height:120px;
+            }
+        }
+        .site-description{
+            ul,ol{
+                width:95%;
+            }
+            .site-description_title{
+                font-size:2.5rem;
+            }
+        }
+        .slider{
+            height: 80vh;
+        }
+        .slider__item{
+            height: 80vh;
+        }
+    }
+	
+}

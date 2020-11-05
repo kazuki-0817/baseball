@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   } 
   root to: "home#index"
 
+  get "bad_request"=>"home#bad_request"
+  get "forbidden" => "home#forbidden"
+  get "internal_server_error" => "home#internal_server_error"
+
   resources :users do
     resources :articles,only: [:index]
   end

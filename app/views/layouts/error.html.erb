@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <%= stylesheet_link_tag "application",media: "all" %>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <nav class="menubar">
+                <a href="/">TOP</a>
+            </nav>
+        </header>
+        <main>
+            <%= yield %>
+        </main>
+    </div>
+</body>
+</html>

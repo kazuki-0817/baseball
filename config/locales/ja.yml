@@ -1,0 +1,16 @@
+ja:
+  activerecord:
+    models:
+      user: 会員情報
+      article: ブログ記事
+    attributes:
+      user:
+        username: 名前
+        email: eメール
+        profile: プロフィール
+        password: パスワード
+        password_confirmation: パスワード確認用
+      article:
+        title: タイトル
+        body: 本文
+        videoid: "url"

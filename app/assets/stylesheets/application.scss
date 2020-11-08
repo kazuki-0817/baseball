@@ -133,6 +133,13 @@ p.notice,p.alert {
 @media (max-width:486px){
     .container{
         max-width:100%;
+        header{
+            background-color: rgba(222, 222, 222, 0.8);
+        }
+        main{
+            padding:0;
+            box-shadow: none;
+        }
         .fix{
             .menu-bar{
                 padding:0;

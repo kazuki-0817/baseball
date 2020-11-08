@@ -125,7 +125,12 @@
     }
 }
 @media (max-width:486px){
+    .article-create{
+        padding-top:3em;
+    }
     .articles{
+        margin:0;
+        padding-top:3em;
         .article-box{
             .article{
                 width:100%;
@@ -137,6 +142,9 @@
         }
         .articles_group{
             width:95%;
+            div{
+                display:block !important;
+            }
             select{
                 display:block;
                 margin-left: 30px;

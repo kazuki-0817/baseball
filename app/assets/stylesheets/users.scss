@@ -68,7 +68,13 @@
     }
 }
 @media (max-width:486px){
+    .users{
+        margin:0;
+        padding-top:3em;
+    }
     .user-container{
+        margin:0;
+        padding-top:3em;
         .field{
             input{
                 width: 80%;

@@ -139,7 +139,11 @@ p.notice,p.alert {
 @media (max-width:486px){
     .container{
         max-width:100%;
-        
+        header{
+            .header_logo h1{
+                font-family: cursive;
+            }
+        }
         main{
             padding:0;
             box-shadow: none;

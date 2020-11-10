@@ -5,7 +5,7 @@ body=["中日ドラゴンズ、高橋周平選手の動画です。阪神の抑�
     youtubeのタイトルにあるように日本一の円陣芸だと思います。ファンを楽しましてくれるし
     選手たちの仲の良さも伝わってきます笑"]
     teams=[1,2,3]
-    videoid=["https://www.youtube.com/watch?v=dEFgfUxH938","https://www.youtube.com/watch?v=k1aTyi6bZPc","https://www.youtube.com/watch?v=DsNduaNB6_Q"]
+    videoid=["https://www.youtube.com/watch?v=6P6VQOLhBnw","https://www.youtube.com/watch?v=RXc5rzmMXV4&t=21s","https://www.youtube.com/watch?v=I0mS7-jx5Sc"]
     ["鈴木 次郎","佐藤 太郎","高橋 花子"].each do |username|
         user=User.find_by(username: username)
         0.upto(3) do |idx|

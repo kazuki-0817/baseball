@@ -1,24 +1,38 @@
-# README
+# Baseball commentator
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### アプリの概要
+    プロ野球に関連するyoutubeの動画とその動画に対する
+　  コメントをサイトに投稿するアプリ
 
-Things you may want to cover:
+### 開発環境
+* OS 「Windows」
+* エディター 「Visual Studio Code」
 
-* Ruby version
+### 使用言語・ライブラリ・フレームワーク
+* HTML、CSS、JavaScript,Ruby2.6.6
+* jQuery
+* Ruby on Rails 5.2.4
 
-* System dependencies
+### 機能
+* ユーザー新規登録、ログイン、ログアウト機能
+* 新規登録時、二段階認証制
+* ユーザー編集
+* 新規記事投稿
+* 記事編集
+* 記事検索（球団別に）
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### 注力した機能や工夫した点
+* 球団別の記事の表示
+　  →このサイトの使用者はプロ野球をよくみる人が想定されるので
+    ファンの球団があると思う。そのため自分の好きな球団の記事が
+    絞り込まれて表示されるようにした。
+* youtubeのurlからiframeを作成
+    →このサイト内で紹介されている動画を見れるようにデータベース
+    に保存されているurlをiframeに代入して表示できるようにした。
+* レスポンシブデザインへの対応
+    →youtubeをスマホで見る人が多いと思うのでそんなユーザーも
+    スマホからこのサイトでyoutubeの動画を紹介できるに
+    レスポンシブデザインに対応した。
+*二段階認証への対応
+    →架空のメールアドレスや他人のメールアドレスを無断で使用してサイトに
+    登録されないようにした。

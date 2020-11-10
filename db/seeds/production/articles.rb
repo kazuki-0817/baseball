@@ -12,7 +12,7 @@ body=["中日ドラゴンズ、高橋周平選手の動画です。阪神の抑�
             Article.create(
                 author: user,
                 team_id: teams[idx % 3],
-                title: "野球観戦#{idx}",
+                title: "野球観戦",
                 videoid:videoid[idx % 3] ,
                 body: body[idx % 3]
             )

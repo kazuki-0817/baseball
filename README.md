@@ -2,7 +2,7 @@
 
 ### アプリの概要
     プロ野球に関連するyoutubeの動画とその動画に対するコメントをサイトに投稿するアプリ<br/>
-    テストアカウント email:yahui55test@gmail.com password:yahuiyahui
+    テストアカウント email:yahui55test@gmail.com ,password:yahuiyahui
 
 ### 開発環境
 * OS 「Windows」

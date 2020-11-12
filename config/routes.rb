@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   resources :teams do
     resources :users, only: [:index]
   end
+
   resources :teams do
     resources :articles, only: [:index]
   end

@@ -27,9 +27,13 @@
 ### 注力した機能や工夫した点
 * 球団別の記事の表示<br/>→このサイトの使用者はプロ野球をよくみる人が想定されるので
     ファンの球団があると思っています。そのため自分の好きな球団の記事が
-    絞り込まれて表示されるようにしました。
+    絞り込まれて表示されるようにしました。<br/>
+    (https://github.com/kazuki-0817/ba1/blob/master/config/routes.rb)<br/>
+    (https://github.com/kazuki-0817/ba1/blob/master/app/controllers/articles_controller.rb)
 * youtubeのurlからiframeを作成<br/>→このサイト内で紹介されている動画を見れるようにデータベース
-    に保存されているurlをiframeに代入して表示できるようにしました。
+    に保存されているurlをiframeに代入して表示できるようにしました。<br/>
+    (https://github.com/kazuki-0817/ba1/blob/master/app/views/articles/index.html.erb)
+
 * レスポンシブデザインへの対応<br/>→youtubeをスマホで見る人が多いと思うのでそんなユーザーも
     スマホからこのサイトでyoutubeの動画を紹介できるように
     レスポンシブデザインに対応しました。

@@ -1,13 +1,13 @@
 $(document).on('turbolinks:load', function() {
     // var currentItemNum = 1;
 
-    // var $slideContainer = $('.slider__container');
+    // var $slideContainer = $('.slider_container');
 
-    // //クラスslider__itemの要素の個数を算出
-    // var slideItemNum = $('.slider__item').length;
+    // //クラスslider_itemの要素の個数を算出
+    // var slideItemNum = $('.slider_item').length;
 
     // //スタイド１つあたりの横幅を算出
-    // var slideItemWidth = $('.slider__item').innerWidth();
+    // var slideItemWidth = $('.slider_item').innerWidth();
 
     // //スライド１つあたりの横幅とスライドの個数から
     // var slideContainerWidth = slideItemWidth * slideItemNum;

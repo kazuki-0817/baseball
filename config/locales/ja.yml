@@ -7,7 +7,7 @@ ja:
       user:
         username: 名前
         email: eメール
-        profile: プロフィール
+        profile: 自己紹介
         password: パスワード
         password_confirmation: パスワード確認用
       article:

@@ -1,22 +1,17 @@
 <div class="home">
     
     <div class="slider">
-            <h2 class="slider-absolute">好きなYoutubeの野球動画を<br>自分の好きなように熱く語るブログサイト!!!</h2>
+            <h2 class="slider_absolute">好きなYoutubeの野球動画を<br>自分の好きなように熱く語るブログサイト!!!</h2>
             <!--  横に並べた複数のスライドを格納する用コンテナ  -->
-           <ul class="slider__container">
+           <ul class="slider_container">
                 <!--  各スライド -->
-               <img src="/assets/baseball3.jpg" alt="野球の画像" class="slider__item slider__item1">
+               <img src="/assets/baseball3.jpg" alt="野球の画像" class="slider_item slider_item1">
                <!--<img src="/assets/baseball4.jpg" alt="野球の画像" class="slider__item slider__item1">
                <img src="/assets/baseball2.jpg" alt="野球の画像" class="slider__item slider__item1">-->
            </ul>
     </div>
-    <div class="home-top">
+    <div class="home_top">
         <h1>野球を<br>　　あつく<br>　　　かたれ！！！</h1>
-        <!--<div class="form">
-            <h2>ブログを開設する</h2>
-            <p><%= link_to "新規登録",new_user_registration_path %></p>
-            <p><%= link_to "ログイン",new_user_session_path %></p>
-        </div>-->
         <img src="/assets/baseball1.jpg" alt="野球ボールの画像です">
     </div>
     <div class="site-description">
@@ -24,16 +19,6 @@
             <li><p class="site-description_title">最近の記事</p></li>
             <li style="display:flex; flex-wrap:wrap; justify-content:space-around;">
                 <%= render "newarticle" %>
-                <!--<p>1.youtubeのurlをコピー!!!</p>
-                <div><img src="/assets/youtube_sample1.JPG" alt="youtubeのurl説明" ></div>-->
-            </li>
-            <li>
-                <!--<p>2.urlの欄に貼り付ける!!!</p>
-                <div style="text-align:center;"><img src="/assets/youtube_sample2.JPG" alt="urlを貼り付ける場所の説明" ></div>-->
-            </li>
-            <li>
-                <!--<p>3.その動画について語ろう!!!</p>
-                <div style="text-align:center;"><img src="/assets/youtube_sample3.JPG" alt="熱く語る場所の説明" ></div>-->
             </li>
         </ul>
     </div>

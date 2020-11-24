@@ -1,16 +1,16 @@
 class ArticlesController < ApplicationController
-    before_action :login_required
+    before_action :login_required #ログインが必要
   def index
-    if params[:user_id]
+    if params[:user_id]# 個別ユーザー(user_id)の記事を取得
       @user=User.find(params[:user_id])
       @articles=@user.articles  
-    elsif params[:team_id]
+    elsif params[:team_id]# 選択されたチームに関連する(team_id)記事を取得
       @team=Team.find(params[:team_id])
       @articles=@team.articles
     else
-      @articles=Article.all
+      @articles=Article.all #全記事を取得
     end
-    @articles=@articles.order(created_at: :desc).page(params[:page]).per(6)
+    @articles=@articles.order(created_at: :desc).page(params[:page]).per(6) #新しい記事の順番に表示
   end
 
   def show

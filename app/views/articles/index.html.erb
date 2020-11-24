@@ -23,20 +23,15 @@
               <option value="/teams/12/articles">西武</option>
             </select>
         </div>
-        
-
-        <!--<% if current_user %>
-        <div class="toolbar"><%= link_to "ブログ記事の作成", new_article_path %></div>
-        <% end %>-->
         <div>
             <% if @articles.present? %>
-                <div class="article-box">
+                <div class="articles_box">
                     <% @articles.each do |article| %>
                         <div class="article">
                             <%= link_to article do %>
-                                <h2 class="article-title"><%= truncate(article.title,length:17) %></h2>
+                                <h2 class="article_title"><%= truncate(article.title,length:17) %></h2>
                                 <iframe  src="https://www.youtube.com/embed/<%=article.videoid[32..42]%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                <p class="article-body"><%= truncate(article.body, length: 30) %></p>
+                                <p class="article_body"><%= truncate(article.body, length: 30) %></p>
                             <% end %>
                                 <%= render "footer", article: article %>
                         </div>
@@ -48,5 +43,4 @@
             <% end %>
         </div>
     </div>
-    <!--<%= render "sidebar" %>-->
 </div>

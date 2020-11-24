@@ -8,18 +8,22 @@
   </div>
 <% end %>
 <table class="attr">
+    <!-- 記事タイトル入力 -->
     <tr class="field">
         <th width="80"><%= f.label :title %></th>
         <td><%= f.text_field :title, size: 50 %></td>
     </tr>
+    <!-- 記事関連チーム入力 -->
     <tr class="field">
         <th width="80"><%= f.label :team_id %></th>
         <td><%= f.collection_select(:team_id,Team.all,:id,:name) %></td>
     </tr>
+    <!-- youtubeのurl入力 -->
     <tr class="field">
         <th width="80"><%= f.label :videoid %></th>
         <td><%= f.text_field :videoid, size: 50 %></td>
     </tr>
+    <!-- 記事本文入力 -->
     <tr class="field">
         <th><%= f.label :body %></th>
         <td><%= f.text_area :body, rows: 10, cols: 45 %></td>

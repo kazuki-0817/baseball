@@ -12,26 +12,26 @@
             display:none;
         }
     }
-    .article-box,.article-single{
+    .articles_box,.articles_single{
         display: flex;
-        .article-edit {
+        .article_edit {
             font-size: 3vmin;
         }
-        .article-title{
+        .article_title{
             font-size:2.4rem;
         }
-        .article-body{
+        .article_body{
             font-size:1.5rem;
         }
         .article{
             width:45%;
         }
     }
-    .article-box{
+    .articles_box{
         justify-content: space-between;
         flex-wrap :wrap;
     }
-    .article-single{
+    .articles_single{
         width: 60%;
         margin: 0 auto;
     }
@@ -41,7 +41,7 @@
         padding: 10px 5px 0 0;
     }
 }
-.article-create{
+.article_create{
     display: flex;
     justify-content: center;
     .page-title{
@@ -77,28 +77,9 @@
            
     }
 }
-.sidebar{
-    width:30%;
-    justify-content: center;
-    margin-top:10rem;
-    .sidebar_box{
-        background-color:rgba(222,222,222,0.5);
-        box-shadow: 0 0 8px gray;
-        width:200px;
-        height:300px;
-        padding:5px;
-        justify-content: center;
-        align-items: center;
-        .sidebar_individual-menu li{
-            padding:10px 0;
-            font-size:1.5rem;
-            list-style: inside;
-        }
-    }
-}
 @media (min-width:1800px){
     .articles{
-        .article-box,.article-single{
+        .articles_box,.articles_single{
             .article{
                 width:33%;
             }
@@ -107,7 +88,7 @@
 }
 @media (max-width:768px){
     .articles{
-        .article-box{
+        .articles_box{
             .article{
                 iframe{
                     height:100px;
@@ -116,7 +97,7 @@
             }
         }
         .articles_group{
-            .article-single{
+            .articles_single{
                 iframe{
                     height:200px;
                     width:300px;
@@ -126,13 +107,13 @@
     }
 }
 @media (max-width:486px){
-    .article-create{
+    .article_create{
         padding-top:3em;
     }
     .articles{
         margin:0;
         padding-top:3em;
-        .article-box{
+        .articles_box{
             .article{
                 width:100%;
                 iframe{
@@ -152,15 +133,12 @@
                 width: 100px;
                 height: 40px;
             }
-            .article-single{
+            .articles_single{
                 width:100%;
                 .article{
                     width:100%;
                 }
             }
-        }
-        .sidebar{
-            display:none !important;
         }
         h1{
             font-size:2.5rem !important;

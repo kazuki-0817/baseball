@@ -1,20 +1,21 @@
 <div class="articles">
     <div class="articles_group">
-        <div class="article-single">
+        <div class="articles_single">
             <div>
                 <% @page_title=@article.title + "-" + @article.author.username + "さんのブログ" %>
                 <h1><%= @article.author.username %>さんのブログ</h1>
                     <div style="display:flex">
-                        <h2 class="article-title" style="padding-right:10px"><%= @article.title %></h2>
+                        <h2 class="article_title" style="padding-right:10px"><%= @article.title %></h2>
                         <% if current_user %>
                             <% if current_user == @article.author %>
-                                <div class="article-edit">
+                                <div class="article_edit">
                                     <%= link_to "編集",[:edit,@article] %>
                                     <%= link_to "削除",@article,method: :delete,data: {confirm: "本当に削除しますか？"} %>
                                 </div>
                             <% end %>
                         <% end %>
                     </div>
+                <!-- youtubeのurlをデータベースから取得し代入 -->
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/<%=@article.videoid[32..42]%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
      
@@ -25,5 +26,4 @@
             </div>
         </div>
     </div>
-    <!--<%= render "sidebar" %>-->
 </div>

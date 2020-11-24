@@ -11,7 +11,7 @@ module Ba1
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
     config.time_zone = "Tokyo"
-    config.i18n.default_locale = :ja
+    config.i18n.default_locale = :ja #default言語を日本語に設定
 
     config.exceptions_app = ->(env) do
       ErrorsController.action(:show).call(env)

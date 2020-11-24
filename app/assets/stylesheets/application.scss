@@ -28,7 +28,6 @@ header{
     }
 }
 main{
-    // background-color: rgba(0,255,0,0.1);
     padding-bottom:100px;
     padding-top:6rem;
     width:100%;
@@ -39,7 +38,6 @@ main{
         position: fixed;
         width: 90%;
         z-index: 100;
-        // background-color:rgba(255,0,0,0.1);
         height:6rem;
         top:5em;
         p,a{
@@ -52,11 +50,12 @@ main{
             float:right;
             padding:2em 2em 0 0;
         }
-        .header__icon {
+        // fontawesome
+        .header_icon {
             color:#fff;
             font-size:40px;
         }
-        /*sidebar*/
+        // スライドメニュー
         .sidebar-menu {
             padding:16px;
             width:220px;
@@ -95,6 +94,8 @@ main{
             z-index:3;
             display:none;
         }
+        // ここまで (スライドメニュー)
+        
         .header-login {
             float: right;
             // width:50%;

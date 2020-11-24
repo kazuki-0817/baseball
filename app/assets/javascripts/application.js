@@ -17,7 +17,8 @@
 //= require jquery_ujs
 //= require_tree .
 $(document).on('turbolinks:load', function() {
-    $('.header__icon').on('click',function(){
+    $('.header_icon').on('click',function(){
+        // 隠れているメニュー欄表示
         $('.sidebar-menu').css(
           'display','block'
         ).animate({
@@ -25,6 +26,7 @@ $(document).on('turbolinks:load', function() {
         }, 
           300
         );
+        // メニュー欄の背景表示
         $('.sidebar-menu-bg').css(
           'display','block'
         ).animate({

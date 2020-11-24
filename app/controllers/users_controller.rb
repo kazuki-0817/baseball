@@ -1,11 +1,11 @@
 class UsersController < ApplicationController
-    before_action :login_required
+    before_action :login_required #ログインが必要
   def index
-    if params[:team_id]
+    if params[:team_id] #チームに関連するユーザーを取得
       @team=Team.find(params[:team_id])
       @users=@team.users
     else
-      @users=User.all
+      @users=User.all #全ユーザーを取得
     end
   end
 

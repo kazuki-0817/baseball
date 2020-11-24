@@ -1,9 +1,8 @@
-<div class="article-create">
+<div class="article_create">
     <div>
         <% @page_title="ブログ記事の編集" %>
         <h2 class="text-center page-title"><%= @page_title %></h2>
 
-        <!--<div class="toolbar"><%= link_to "記事の表示に戻る",@article %></div>-->
 
         <%= form_with model: @article,local: true do |f| %>
             <%= render "form",f: f %>

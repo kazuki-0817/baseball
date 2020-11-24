@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .home{
     width:100%;
-    .home-top{
+    .home_top{
         display:flex;
         justify-content: space-around;
         align-items: center;
@@ -42,7 +42,7 @@
         position: relative;
         
     }
-    .slider-absolute{
+    .slider_absolute{
         position: absolute;
         bottom:50px;
         right:5px;
@@ -50,7 +50,7 @@
         font-size:4vw;
         color:rgba(230,230,230,1);
     }
-    .slider__container{
+    .slider_container{
         /* スライドを表示する画面とスライド１枚をぴったり合わせるため設定 */
         padding: 0;
         margin: 0;
@@ -64,7 +64,7 @@
         position: relative;
     
     }
-    .slider__item{
+    .slider_item{
         /* スライド１枚あたりの横幅 */
         width: 100vw;
         /* スライド１枚あたりの縦幅 */
@@ -133,7 +133,7 @@
         h1{
             font-size:2.8rem;
         }
-        .home-top{
+        .home_top{
             img{
                 width:250px;
                 height:250px;
@@ -150,7 +150,7 @@
         h1{
             font-size:1.8rem;
         }
-        .home-top{
+        .home_top{
             img{
                 width:120px;
                 height:120px;

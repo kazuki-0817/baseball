@@ -1,29 +1,29 @@
 <!-- ユーザー編集画面 -->
 <%= form_with model: @user do |f| %>
     <div class="user-container">
-        <div class="field">
             <!-- profile画像編集 -->
+        <div class="field">
             <p><%= f.label :profile_image %>
             <p><%= attachment_image_tag @user,:profile_image,fallback: "baseball_st5.jpg",size:"200x200" %></p>
             <%= f.attachment_field :profile_image %></p>
         </div>
-        <div class="field">
             <!-- ユーザー名編集 -->
+        <div class="field">
             <p><%= f.label :username %>
             <%= f.text_field :username %></p>
         </div>
-        <div class="field">
             <!-- eメールアドレス編集 -->
+        <div class="field">
             <p><%= f.label :email %>
             <%= f.email_field :email %></p>
         </div>
-        <div class="field">
             <!-- profile -->
+        <div class="field">
             <p><%= f.label :profile %></p>
             <p><%= f.text_area :profile,rows: 10, cols: 45 %></p>
         </div>
-        <div class="field">
             <!-- 送信ボタン -->
+        <div class="field">
             <%= f.submit %>
         </div>
     </div>
